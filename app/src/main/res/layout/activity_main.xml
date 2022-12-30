@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="250dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="250dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/drink" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="PICK IMAGE" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="fill_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:minHeight="50dp" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="50dp" />
+
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:minHeight="50dp" />
+
+            <EditText
+                android:id="@+id/txtRePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Re-Enter Password"
+                android:inputType="textPassword"
+                android:minHeight="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/license" />
+
+            <CheckBox
+                android:id="@+id/checkAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="I Agree" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54744524" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGender"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:text="Male" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:text="Female" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:text="Other" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country: " />
+
+        <Spinner
+            android:id="@+id/SpinnerCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/txtCountry"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="50dp"
+            android:text="REGISTER" />
+    </LinearLayout>
+</LinearLayout>

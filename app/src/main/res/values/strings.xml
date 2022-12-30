@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="planets_array">
+        <item>USA</item>
+        <item>Vietnam</item>
+        <item>Australia</item>
+    </string-array>
+    <string name="app_name">Register</string>
+    <string name="license">These is our license agreement: You can share this app anywhere that you want and use it however you want. Just remember to enjoy</string>
+</resources>
